@@ -83,7 +83,7 @@
         android:layout_height="wrap_content"
         android:textSize="15dp"
         android:text="Cancel"
-        android:id="@+id/btnCancel"
+        android:id="@+id/btncancel"
         android:layout_below="@+id/btnLogin"/>
 
 

@@ -50,10 +50,11 @@ public class MainActivity extends Activity {
         setContentView(R.layout.activity_main);
         pref = getSharedPreferences("login", MODE_PRIVATE);
         b1 = (Button) findViewById(R.id.btnLogin);
-        b2 = (Button) findViewById(R.id.btnCancel);
+        b2 = (Button) findViewById(R.id.btncancel);
         ed1 = (EditText) findViewById(R.id.editUser);
         ed2 = (EditText) findViewById(R.id.editPass);
         tx1 = (TextView) findViewById(R.id.textView2);
+
 
         tx1.setVisibility(View.GONE);
         b1.setOnClickListener(new View.OnClickListener() {
@@ -74,6 +75,7 @@ public class MainActivity extends Activity {
                 finish();
             }
         });
+
 
     }
 
