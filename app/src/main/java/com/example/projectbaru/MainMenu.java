@@ -20,7 +20,7 @@ public class MainMenu extends AppCompatActivity {
         menu1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(getApplicationContext(), Listdata.class));
+                startActivity(new Intent(getApplicationContext(), ListdataActivity.class));
             }
         });
         menu2 = (CardView)findViewById(R.id.menu2);

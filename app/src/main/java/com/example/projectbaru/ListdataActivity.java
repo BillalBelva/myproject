@@ -9,7 +9,7 @@ import android.widget.ImageView;
 
 import java.util.ArrayList;
 
-public class Listdata extends AppCompatActivity {
+public class ListdataActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private DataAdapter adapter;
@@ -48,7 +48,7 @@ public class Listdata extends AppCompatActivity {
 
             }
         });
-        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(Listdata.this);
+        RecyclerView.LayoutManager layoutManager = new LinearLayoutManager(ListdataActivity.this);
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setAdapter(adapter);
 
