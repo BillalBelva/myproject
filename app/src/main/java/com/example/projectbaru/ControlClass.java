@@ -15,13 +15,14 @@ public class ControlClass extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("login", Context.MODE_PRIVATE);
         if (sharedPreferences.getString("username", "").isEmpty() ||
                 sharedPreferences.getString("username", "").equalsIgnoreCase("")){
-            //login
+            //login dulu
             startActivity(new Intent(getApplicationContext(),MainActivity.class));
             finish();
         }else{
             startActivity(new Intent(getApplicationContext(),MainMenu.class));
             finish();
         }
+
     }
 
 

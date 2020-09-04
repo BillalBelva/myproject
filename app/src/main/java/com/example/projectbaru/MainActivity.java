@@ -1,6 +1,7 @@
 package com.example.projectbaru;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 
@@ -60,57 +61,21 @@ public class MainActivity extends Activity {
             @Override
 
             public void onClick(View v) {
-                if (ed1.getText().toString().equals("user") &&
-                        ed2.getText().toString().equals("user1234"))
-                    Toast.makeText(getApplicationContext(), "Login Sukses", Toast.LENGTH_SHORT).show();
-                else {
-                    Toast.makeText(getApplicationContext(), "Username atau Password Anda Salah",
-                            Toast.LENGTH_SHORT).show();
-
+                if (ed1.getText().toString().equalsIgnoreCase("admin") &&
+                        ed2.getText().toString().equalsIgnoreCase("admin"))
                     //saving ke SP
                     editor = pref.edit();
-                    editor.putString("username", ed1.getText().toString());
-                    editor.putString("status", "login");
-                    editor.apply();
+                editor.putString("username", ed1.getText().toString());
+                editor.putString("status", "login");
+                editor.apply();
 
-
-                    tx1.setVisibility(View.VISIBLE);
-                    tx1.setBackgroundColor(Color.RED);
-                    counter--;
-                    tx1.setText(Integer.toString(counter));
-
-
-
-                    if (counter == 0) {
-
-                        b1.setEnabled(false);
-
-                    }
-
-                }
-
-
-
-            }
-
-        });
-
-
-
-        b2.setOnClickListener(new View.OnClickListener() {
-
-            @Override
-
-            public void onClick(View v) {
+                startActivity(new Intent(getApplicationContext(), MainMenu.class));
 
                 finish();
-
             }
-
         });
 
     }
 
-    public void LOGIN(View view) {
-    }
+
 }
